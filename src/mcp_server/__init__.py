@@ -1,0 +1,1 @@
+"""Módulo do servidor MCP."""
