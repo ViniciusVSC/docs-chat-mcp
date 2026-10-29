@@ -1,0 +1,28 @@
+llm:
+  provider: "anthropic" # Opções: "anthropic" ou "ollama"
+  anthropic_model: "claude-3-5-sonnet-latest"
+  ollama_model: "llama3.1:8b"
+  ollama_base_url: "http://localhost:11434"
+  temperature: 0.0
+
+embeddings:
+  model_name: "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+
+storage:
+  data_dir: "data"
+  docs_dir: "data/docs"
+  tables_dir: "data/tables"
+  chroma_dir: "data/chroma_db"
+  default_workspace: "default"
+
+chunking:
+  chunk_size: 1000
+  chunk_overlap: 200
+
+duckdb:
+  max_rows: 500
+  timeout_seconds: 10
+
+agent:
+  max_rewrite_retries: 2
+  top_k: 5

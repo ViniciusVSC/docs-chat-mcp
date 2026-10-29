@@ -1,0 +1,38 @@
+# Dados baixados e índices locais (NÃO versionar conforme especificação)
+data/
+chroma_db/
+*.db
+*.duckdb
+eval/last_report.json
+
+# Python / Ambientes virtuais
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+ENV/
+env/
+.uv/
+build/
+dist/
+*.egg-info/
+
+# Variáveis de ambiente e segredos
+.env
+.env.local
+
+# Testes e caches
+.pytest_cache/
+.coverage
+htmlcov/
+.ruff_cache/
+.mypy_cache/
+
+# IDEs e Sistema Operacional
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
