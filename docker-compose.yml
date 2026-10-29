@@ -1,0 +1,20 @@
+services:
+  docs-chat-mcp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: docs-chat-mcp
+    ports:
+      - "8501:8501"
+    env_file:
+      - .env
+    environment:
+      - DATA_DIR=/app/data
+      - OLLAMA_BASE_URL=${OLLAMA_BASE_URL:-http://host.docker.internal:11434}
+    volumes:
+      - ./data:/app/data
+      - ./config.yaml:/app/config.yaml:ro
+    command: >
+      sh -c "python scripts/download_samples.py &&
+             streamlit run src/app.py --server.port=8501 --server.address=0.0.0.0"
+    restart: unless-stopped
