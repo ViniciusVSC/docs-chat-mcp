@@ -1,0 +1,137 @@
+# Conjunto de avaliação do docs-chat-mcp (10 perguntas sobre legislação + 10 sobre tabelas)
+questions:
+  # =========================================================================
+  # A) 10 Perguntas sobre Legislação (CLT, CDC, LGPD, Marco Civil da Internet)
+  # =========================================================================
+  - id: law_01
+    category: text
+    question: "Qual o prazo de férias previsto na CLT após cada período de 12 meses de vigência do contrato?"
+    expected_doc_id: "clt"
+    expected_articles: ["Art. 130", "Art. 129"]
+    expected_keywords: ["30", "dias", "corridos", "130"]
+
+  - id: law_02
+    category: text
+    question: "Qual a duração normal do trabalho diário prevista no Art. 58 da CLT?"
+    expected_doc_id: "clt"
+    expected_articles: ["Art. 58"]
+    expected_keywords: ["8", "oito", "horas", "diárias"]
+
+  - id: law_03
+    category: text
+    question: "Segundo o Art. 487 da CLT, qual é o prazo mínimo de aviso prévio quando o pagamento é mensal ou o empregado tem mais de 12 meses?"
+    expected_doc_id: "clt"
+    expected_articles: ["Art. 487"]
+    expected_keywords: ["trinta dias", "30", "487"]
+
+  - id: law_04
+    category: text
+    question: "Quais condutas constituem justa causa para rescisão do contrato de trabalho pelo empregador no Art. 482 da CLT?"
+    expected_doc_id: "clt"
+    expected_articles: ["Art. 482"]
+    expected_keywords: ["improbidade", "indisciplina", "insubordinação", "abandono"]
+
+  - id: law_05
+    category: text
+    question: "Qual é o prazo de arrependimento para o consumidor desistir do contrato em compras fora do estabelecimento comercial segundo o Art. 49 do CDC?"
+    expected_doc_id: "cdc"
+    expected_articles: ["Art. 49"]
+    expected_keywords: ["7 dias", "sete dias", "49"]
+
+  - id: law_06
+    category: text
+    question: "Qual o prazo para reclamar pelos vícios aparentes ou de fácil constatação em produtos e serviços duráveis e não duráveis no Art. 26 do CDC?"
+    expected_doc_id: "cdc"
+    expected_articles: ["Art. 26"]
+    expected_keywords: ["trinta dias", "noventa dias", "30", "90"]
+
+  - id: law_07
+    category: text
+    question: "Em quantos dias o fornecedor deve sanar o vício do produto antes que o consumidor possa exigir a substituição segundo o Art. 18 do CDC?"
+    expected_doc_id: "cdc"
+    expected_articles: ["Art. 18"]
+    expected_keywords: ["trinta dias", "30", "18"]
+
+  - id: law_08
+    category: text
+    question: "O que a LGPD diz sobre o consentimento do titular de dados pessoais nos artigos 5º, 7º e 8º?"
+    expected_doc_id: "lgpd"
+    expected_articles: ["Art. 8", "Art. 7", "Art. 5"]
+    expected_keywords: ["consentimento", "titular", "escrito", "finalidades", "revogado"]
+
+  - id: law_09
+    category: text
+    question: "Como a LGPD define dado pessoal sensível no Art. 5º e regula seu tratamento no Art. 11?"
+    expected_doc_id: "lgpd"
+    expected_articles: ["Art. 5", "Art. 11"]
+    expected_keywords: ["racial", "religiosa", "saúde", "biométrico", "genético", "sensível"]
+
+  - id: law_10
+    category: text
+    question: "O que o Art. 9º do Marco Civil da Internet estabelece sobre a neutralidade da rede?"
+    expected_doc_id: "marco_civil_internet"
+    expected_articles: ["Art. 9"]
+    expected_keywords: ["isonômico", "pacotes", "dados", "tráfego", "9"]
+
+  # =========================================================================
+  # B) 10 Perguntas sobre Tabelas (Banco Central SGS e IBGE Localidades/SIDRA)
+  # =========================================================================
+  - id: tbl_01
+    category: table
+    question: "Qual foi o IPCA acumulado nos últimos 12 meses disponíveis?"
+    expected_table: "bcb_ipca_mensal"
+    expected_keywords: ["bcb_ipca_mensal", "ipca_acumulado_composto_pct", "12"]
+
+  - id: tbl_02
+    category: table
+    question: "Qual foi o IPCA acumulado no ano de 2024?"
+    expected_table: "bcb_ipca_mensal"
+    expected_keywords: ["2024", "bcb_ipca_mensal", "4.83"]
+
+  - id: tbl_03
+    category: table
+    question: "Qual foi a taxa Selic meta média, mínima e máxima em 2024?"
+    expected_table: "bcb_selic_meta"
+    expected_keywords: ["2024", "bcb_selic_meta", "10.5", "12.25"]
+
+  - id: tbl_04
+    category: table
+    question: "Qual foi a cotação média, mínima e máxima do dólar PTAX venda em 2024?"
+    expected_table: "bcb_dolar_ptax_venda"
+    expected_keywords: ["2024", "bcb_dolar_ptax_venda", "5."]
+
+  - id: tbl_05
+    category: table
+    question: "Quais os 10 municípios mais populosos do Paraná?"
+    expected_table: "ibge_populacao_municipios"
+    expected_keywords: ["Curitiba", "Londrina", "Maringá", "Ponta Grossa", "ibge_populacao_municipios"]
+
+  - id: tbl_06
+    category: table
+    question: "Quais os 5 municípios mais populosos do Brasil?"
+    expected_table: "ibge_populacao_municipios"
+    expected_keywords: ["São Paulo", "Rio de Janeiro", "Brasília", "Fortaleza", "Salvador"]
+
+  - id: tbl_07
+    category: table
+    question: "Quais os 5 municípios com maior PIB no Brasil?"
+    expected_table: "ibge_pib_municipios"
+    expected_keywords: ["São Paulo", "Rio de Janeiro", "Brasília", "ibge_pib_municipios"]
+
+  - id: tbl_08
+    category: table
+    question: "Quais os 5 municípios com maior PIB no Paraná?"
+    expected_table: "ibge_pib_municipios"
+    expected_keywords: ["Curitiba", "Araucária", "Londrina", "ibge_pib_municipios"]
+
+  - id: tbl_09
+    category: table
+    question: "Quantos municípios existem no estado de Minas Gerais (MG)?"
+    expected_table: "ibge_municipios"
+    expected_keywords: ["853", "MG", "Minas Gerais", "ibge_municipios"]
+
+  - id: tbl_10
+    category: mixed
+    question: "Qual a relação entre a Selic e a inflação nos últimos 3 anos?"
+    expected_table: "bcb_selic_meta"
+    expected_keywords: ["bcb_selic_meta", "bcb_ipca_mensal", "ipca_acumulado_pct", "selic_media_aa"]
